@@ -1,0 +1,38 @@
+@charset "ISO-8859-1";
+
+h1{
+	color:red;
+}
+h4{
+	color:blue;
+}
+.banner{
+	width:300px;
+	height:200px;
+	border-radius:5px;
+}
+.banner:hover{
+	transform:scaleX(1.02);
+}
+.grid{
+	left:0px;
+	right:0px;
+	display:flex;
+	justify-content:left;
+}
+.ingredient-group{
+	
+	height:200px;
+	width:300px;
+	margin-left:50px;
+}
+
+.btn-success{
+	background-color:green;
+	color:white;
+	font:monospace;
+	border-radius:3px;
+}
+.btn-success:hover{
+	transform:scaleX(1.15);
+}

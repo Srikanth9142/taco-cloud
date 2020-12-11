@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Order Form - Taco Cloud </title>
+<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+   <form method="POST" th:action="@{/orders}" th:object="${order}">
+		<h1>Order Your Taco creations!!</h1>
+		
+		<img th:src="@{images/taco1.jpg}" alt="taco">
+		<a th:href="@{/design}">Design another taco</a>
+		
+		<!--  <div th:if="${fields.hasErrors()}">
+			<span class="validationError">
+				Following Errors found!!
+			</span>
+		</div>-->
+		
+		<h3>Deliver my tacos to ...</h3>
+		<label for="name">Name: </label>
+		<input type="text" th:name="name" />
+		<br>
+		
+		<label for="street">Street: </label>
+		<input type="text" th:name="street" />
+		<br>
+		
+		<label for="city">City: </label>
+		<input type="text" th:name="city" />
+		<br>
+		
+		<label for="state">State: </label>
+		<input type="text" th:name="state" />
+		<br>
+		
+		<label for="zip">Zip: </label>
+		<input type="text" th:name="zip" />
+		<br>
+		<h4>Payment Details</h4>
+		<label for="ccNumber">ccNumber: </label>
+		<input type="text" th:name="ccNumber" />
+		<br>
+		
+		<label for="ccExpiration">Expiration: </label>
+		<input type="text" th:name="ccExpiration" />
+		<br>
+		
+		<label for="ccCVV">CVV: </label>
+		<input type="text" th:name="ccCVV" />
+		<br>
+		
+		<input type="submit" value="Submit Order">
+	</form>
+
+
+</body>
+</html>
